@@ -13,8 +13,8 @@ public:
 
     String(int size) : str(new char[size + 1]) {
         count++;
-        std::cout << "Enter string: ";
-        std::cin.getline(str, size + 1);
+        cout << "Enter string: ";
+        cin.getline(str, size + 1);
     }
 
     String(const char* s) : String(strlen(s)) {
@@ -27,12 +27,12 @@ public:
     }
 
     void input() {
-        std::cout << "Enter string: ";
-        std::cin.getline(str, strlen(str) + 1);
+        cout << "Enter string: ";
+        cin.getline(str, strlen(str) + 1);
     }
 
     void display() const {
-        std::cout << "String: " << str << std::endl;
+        cout << "String: " << str << endl;
     }
 
     static int getCount() {
@@ -51,7 +51,7 @@ int main() {
     s2.display();
     s3.display();
 
-    std::cout << "Number of String objects created: " << String::getCount() << std::endl;
+    cout << "Number of String objects created: " << String::getCount() << endl;
 
     return 0;
 }
